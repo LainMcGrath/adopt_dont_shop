@@ -14,5 +14,5 @@ shelter_1 = Shelter.create( name:    "Denver Dog Shelter",
 shelter_2 = Shelter.create( name:    "Denver Cat Shelter",
                             address: "123 Meow St",
                             city:    "Denver",
-                            state:    "CO",
+                            state:   "CO",
                             zip:     "80206")

@@ -1,4 +1,5 @@
-class ShelterController < ApplicationController
+class SheltersController < ApplicationController
+
   def index
     @shelters = Shelter.all
   end
@@ -15,7 +16,7 @@ class ShelterController < ApplicationController
       zip: params[:shelter][:zip],
       })
       shelter.save
-      redirect_to '/shelter'
+      redirect_to '/shelters'
   end
 
   def show
@@ -36,11 +37,11 @@ class ShelterController < ApplicationController
       zip: params[:shelter][:zip]
       })
       shelter.save
-      redirect_to "/shelter/#{shelter.id}"
+      redirect_to "/shelters/#{shelter.id}"
   end
 
   def destroy
     Shelter.destroy(params[:id])
-    redirect_to '/shelter'
+    redirect_to '/shelters'
   end
 end
