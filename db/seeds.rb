@@ -16,3 +16,9 @@ shelter_2 = Shelter.create( name:    "Denver Cat Shelter",
                             city:    "Denver",
                             state:   "CO",
                             zip:     "80206")
+
+dog = Pet.create( image: ,
+                  name: "Sparky",
+                  approximate_age: 7,
+                  sex: "male",
+                  shelter: shelter_1)
