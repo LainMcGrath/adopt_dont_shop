@@ -22,5 +22,8 @@ RSpec.describe "shelters index page", type: :feature do
     expect(page).to have_current_path("/shelters/#{@shelter_1.id}/edit")
   end
 
-  it "can click on a delete button and "
+  it "can click on a delete button and refresh the page" do
+    click_button("delete", match: :first)
+    expect(page).to have_current_path("/shelters")
+  end
 end
