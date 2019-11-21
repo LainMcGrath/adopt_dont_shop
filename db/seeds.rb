@@ -19,11 +19,13 @@ shelter_2 = Shelter.create( name:    "Denver Cat Shelter",
 
 dog = shelter_1.pets.create( image: "https://www.washingtonpost.com/resizer/kPkFQsQjvSIjfXG-mFXDEpxq6-4=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HB4AT3D3IMI6TMPTWIZ74WAR54.jpg",
                   name: "Sparky",
+                  description: "A lovable pup! ",
                   approximate_age: 7,
                   sex: "male",
-                  shelter: shelter_1)
+                  adoptable: true)
 
-  cat = Pet.create( name: "Louise",
-                    approximate_age: 7,
-                    sex: "male",
-                    shelter: shelter_2)
+cat = shelter_2.pets.create( name: "Louise",
+                  description: "MEOW!",
+                  approximate_age: 7,
+                  sex: "male",
+                  adoptable: true)

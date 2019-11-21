@@ -7,10 +7,10 @@ RSpec.describe "shelter ID page", type: :feature do
   end
 
   it "can view shelter demographics" do
-    expect(page).to have_content("Denver Dog Shelter")
-    # expect(page).to have_content(@shelter_1.address)
-    # expect(page).to have_content(@shelter_1.city)
-    # expect(page).to have_content(@shelter_1.state)
-    # expect(page).to have_content(@shelter_1.zip)
+    expect(page).to have_content("Shelter name:")
+    # expect(page).to have_content("123 Main St")
+    # expect(page).to have_content("Denver")
+    # expect(page).to have_content("CO")
+    # expect(page).to have_content("80206")
   end
 end
