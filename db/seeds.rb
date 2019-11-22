@@ -24,8 +24,9 @@ dog = shelter_1.pets.create( image: "https://www.washingtonpost.com/resizer/kPkF
                   sex: "male",
                   adoptable: true)
 
-cat = shelter_2.pets.create( name: "Louise",
+cat = shelter_2.pets.create( image: "https://timesofindia.indiatimes.com/thumb/msid-67586673,width-800,height-600,resizemode-4/67586673.jpg", 
+                  name: "Louise",
                   description: "MEOW!",
                   approximate_age: 7,
                   sex: "male",
-                  adoptable: true)
+                  adoptable: false)
