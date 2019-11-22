@@ -7,10 +7,16 @@ RSpec.describe "shelter ID page", type: :feature do
   end
 
   it "can view shelter demographics" do
-    expect(page).to have_content("Denver Dog Shelter")
-    # expect(page).to have_content(@shelter_1.address)
-    # expect(page).to have_content(@shelter_1.city)
-    # expect(page).to have_content(@shelter_1.state)
-    # expect(page).to have_content(@shelter_1.zip)
+    expect(page).to have_content(@shelter_1.name)
+  end
+
+  it "can click on edit and go to the page" do
+    click_link("Edit")
+    expect(page).to have_current_path("/shelters/#{@shelter_1.id}/edit")
+  end
+
+  it "can click on delete and delete the shelter" do
+    click_link("Delete")
+    expect(page).to have_current_path("/shelters")
   end
 end
