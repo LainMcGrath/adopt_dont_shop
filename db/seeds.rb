@@ -17,11 +17,22 @@ shelter_2 = Shelter.create( name:    "Denver Cat Shelter",
                             state:   "CO",
                             zip:     "80206")
 
-dog = shelter_1.pets.create( image: "https://www.washingtonpost.com/resizer/kPkFQsQjvSIjfXG-mFXDEpxq6-4=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HB4AT3D3IMI6TMPTWIZ74WAR54.jpg",
+dog_1 = shelter_1.pets.create( image: "https://www.washingtonpost.com/resizer/kPkFQsQjvSIjfXG-mFXDEpxq6-4=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HB4AT3D3IMI6TMPTWIZ74WAR54.jpg",
                   name: "Sparky",
                   approximate_age: 7,
                   sex: "male")
 
-  cat = Pet.create( name: "Louise",
-                    approximate_age: 7,
+dog_2 = shelter_1.pets.create( image: "http://santansun.com/wp-content/uploads/2018/11/5b7fdeab1900001d035028dc.jpeg",
+                  name: "Jerry",
+                  approximate_age: 7,
+                  sex: "male")
+
+dog_3 = shelter_2.pets.create( image: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Airedale_terrier_head%2C_Josselin_01.jpg",
+                    name: "Louise",
+                    approximate_age: 2,
+                    sex: "male")
+
+dog_3 = shelter_2.pets.create( image: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Airedale_terrier_head%2C_Josselin_01.jpg",
+                    name: "Frank",
+                    approximate_age: 2,
                     sex: "male")
