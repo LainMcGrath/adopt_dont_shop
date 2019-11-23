@@ -1,4 +1,4 @@
-<h1><%= @shelter.name %></h1>
+
 <% @pets %>
 
 <h2>Pets</h2>
@@ -15,5 +15,5 @@
     <% end %>
   <p>Current shelter: <%= pet.shelter&.name %></p>
 
-  <%= link_to "Create new pet", "/shelters/#{@shelter.id}/pets/new" %>
+  <%= link_to 'Add New Adoptable Pet', "/shelters/#{@shelter.id}/pets/new" %>
 <% end %>
