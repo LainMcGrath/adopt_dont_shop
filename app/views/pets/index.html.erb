@@ -14,7 +14,9 @@
       Status: Not Adoptable
     <% end %>
   <p>Current shelter: <%= pet.shelter&.name %></p>
-
+  <p><%= link_to "Edit pet", "/pets/#{pet.id}/edit" %> <%= pet.name %></p>
 <% end %>
 
-<%= link_to 'Add New Adoptable Pet', "/shelters/#{@shelter.id}/pets/new" %>
+<% if @shelter %>
+  <%= link_to 'Add New Adoptable Pet', "/shelters/#{@shelter.id}/pets/new" %>
+<% end %>
