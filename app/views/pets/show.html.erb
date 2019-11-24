@@ -3,4 +3,9 @@
 <p>Description: <%= @pet.description %></p>
 <p>Age: <%= @pet.approximate_age %></p>
 <p>Sex: <%= @pet.sex %></p>
-<p>Adoptable? <%= @pet.adoptable %></p>
+<p> <% if @pet.adoptable %>
+      Status: Adoptable
+    <% else %>
+      Status: Not Adoptable
+    <% end %></p>
+<%= link_to "Edit pet", "/pets/#{@pet.id}/edit" %>
