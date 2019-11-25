@@ -1,4 +1,4 @@
-<h1>Add a new pet to the shelter</h1>
+<h1>Add a new pet to <%= @shelter.name%></h1>
 
 <%= form_tag "/shelters/#{@shelter.id}/pets" do %>
 <%= label_tag :image_url %>

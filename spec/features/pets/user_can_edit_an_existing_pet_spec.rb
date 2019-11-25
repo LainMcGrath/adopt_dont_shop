@@ -17,7 +17,7 @@ RSpec.describe "User can edit an existing pet", type: :feature do
                       adoptable: true)
 
     visit "/pets/#{dog_1.id}"
-    click_link "Edit pet"
+    click_link "Edit #{dog_1.name}"
 
     fill_in :image_url, with: "https://www.severnedgevets.co.uk/sites/default/files/styles/medium/public/guides/puppy_0.png?itok=qQYZZd9K"
     fill_in :name, with: "Spuds"
