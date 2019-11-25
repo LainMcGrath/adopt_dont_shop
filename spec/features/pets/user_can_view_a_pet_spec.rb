@@ -11,7 +11,7 @@ RSpec.describe "pet index page", type: :feature do
       approximate_age: 7,
       sex: "male",
       shelter: @shelter_1)
-    visit "/pets"
+    visit "/pets/#{@pet.id}"
   end
 
   it "can see all pets" do
