@@ -13,7 +13,7 @@
     <% else %>
       Status: Not Adoptable
     <% end %>
-  <p>Current shelter: <%= pet.shelter&.name %></p>
+  <p>Current shelter: <%= link_to "#{pet.shelter&.name}", "/shelters/#{pet.shelter_id}" %></p>
   <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit" %></p>
   <p><%= link_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>
 <% end %>
