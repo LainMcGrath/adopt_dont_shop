@@ -17,4 +17,14 @@ RSpec.describe "pet index page", type: :feature do
   it "can see all pets" do
     expect(page).to have_content(@pet.name)
   end
+
+  it "can edit pet" do
+    click_on("Edit #{@pet.name}")
+    expect(page).to have_current_path("/pets/#{@pet.id}/edit")
+  end
+
+  it "can delete pet" do
+    click_on("Delete #{@pet.name}")
+    expect(page).to have_current_path("/pets")
+  end
 end
