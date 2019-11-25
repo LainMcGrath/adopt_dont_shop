@@ -27,4 +27,9 @@ RSpec.describe "pet index page", type: :feature do
     click_on("Delete #{@pet.name}")
     expect(page).to have_current_path("/pets")
   end
+
+  it "can click on current shelter link" do
+    click_on("#{@shelter_1.name}")
+    expect(page).to have_current_path("/shelters/#{@shelter_1.id}")
+  end
 end
