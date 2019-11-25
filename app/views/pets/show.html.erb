@@ -8,4 +8,5 @@
     <% else %>
       Status: Not Adoptable
     <% end %></p>
-<%= link_to "Edit pet", "/pets/#{@pet.id}/edit" %>
+<%= link_to "Edit #{@pet.name}", "/pets/#{@pet.id}/edit" %></br>
+<%= link_to "Delete #{@pet.name}", "/pets/#{@pet.id}", method: :delete %>
