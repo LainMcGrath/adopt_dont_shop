@@ -21,18 +21,18 @@ RSpec.describe "User can edit an existing pet", type: :feature do
 
     fill_in :image_url, with: "https://www.severnedgevets.co.uk/sites/default/files/styles/medium/public/guides/puppy_0.png?itok=qQYZZd9K"
     fill_in :name, with: "Spuds"
-    fill_in :sex, with: "female"
-    fill_in :description, with: "A cute cuddy pup!"
+    select('Male', :from => 'Sex')
+    fill_in :description, with: "A cute cuddly pup!"
     fill_in :approximate_age, with: "3"
     click_button('Update pet')
 
     edited_pet = Pet.last
-
-    expect(page).to have_content(edited_pet.name)
-    expect(page).to have_content(edited_pet.sex)
-    expect(page).to have_content(edited_pet.description)
-    expect(page).to have_content(edited_pet.approximate_age)
-
     expect(page).to have_current_path("/pets/#{dog_1.id}")
+
+    expect(page).to have_content("Spuds")
+    expect(page).to have_content("Male")
+    expect(page).to have_content("A cute cuddly pup!")
+    expect(page).to have_content("3")
+    expect(page).to have_no_content("Female")
     end
   end
